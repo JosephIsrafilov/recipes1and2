@@ -25,18 +25,19 @@ export default function SearchBar() {
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     setQuery(value);
-    
-    // Real-time search with debouncing
+  };
+
+  useEffect(() => {
     const timeoutId = setTimeout(() => {
-      if (value.trim()) {
-        router.push(`/recipes/search?query=${encodeURIComponent(value.trim())}`);
-      } else {
+      if (query.trim()) {
+        router.push(`/recipes/search?query=${encodeURIComponent(query.trim())}`);
+      } else if (query === "") {
         router.push("/recipes/search");
       }
     }, 300);
 
     return () => clearTimeout(timeoutId);
-  };
+  }, [query, router]);
 
   return (
     <div className="bg-white rounded-lg shadow-sm p-4 mb-6">

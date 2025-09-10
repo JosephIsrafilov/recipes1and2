@@ -4,7 +4,6 @@ export default function Loading() {
       <div className="container mx-auto px-4 py-8">
         <div className="max-w-4xl mx-auto">
           <div className="animate-pulse">
-            {/* Breadcrumbs */}
             <div className="mb-6">
               <div className="h-4 bg-gray-300 rounded w-1/4"></div>
             </div>
@@ -17,7 +16,6 @@ export default function Loading() {
               </div>
 
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                {/* Ingredients */}
                 <div>
                   <div className="h-6 bg-gray-300 rounded w-1/3 mb-4"></div>
                   <div className="space-y-2">
@@ -30,7 +28,6 @@ export default function Loading() {
                   </div>
                 </div>
 
-                {/* Steps */}
                 <div>
                   <div className="h-6 bg-gray-300 rounded w-1/2 mb-4"></div>
                   <div className="space-y-4">

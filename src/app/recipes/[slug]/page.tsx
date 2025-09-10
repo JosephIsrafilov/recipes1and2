@@ -15,16 +15,10 @@ export default function RecipePage({ params }: RecipePageProps) {
     notFound();
   }
 
-  // Artificial error for demonstration (uncomment to test error.tsx)
-  // if (recipe.slug === "chocolate-cake") {
-  //   throw new Error("Artificial error for testing error.tsx");
-  // }
-
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="container mx-auto px-4 py-8">
         <div className="max-w-4xl mx-auto">
-          {/* Breadcrumbs */}
           <nav className="mb-6">
             <ol className="flex items-center space-x-2 text-sm text-gray-600">
               <li>
@@ -58,7 +52,6 @@ export default function RecipePage({ params }: RecipePageProps) {
               </div>
 
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                {/* Ingredients */}
                 <div>
                   <h2 className="text-2xl font-semibold text-gray-800 mb-4 flex items-center">
                     <svg className="w-6 h-6 mr-2 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -76,7 +69,6 @@ export default function RecipePage({ params }: RecipePageProps) {
                   </ul>
                 </div>
 
-                {/* Steps */}
                 <div>
                   <h2 className="text-2xl font-semibold text-gray-800 mb-4 flex items-center">
                     <svg className="w-6 h-6 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">

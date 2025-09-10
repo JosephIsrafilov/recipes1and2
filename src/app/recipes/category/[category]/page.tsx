@@ -12,7 +12,6 @@ interface CategoryPageProps {
 export default function CategoryPage({ params }: CategoryPageProps) {
   const { category } = params;
 
-  // Check if category exists
   if (!categories.includes(category)) {
     notFound();
   }
